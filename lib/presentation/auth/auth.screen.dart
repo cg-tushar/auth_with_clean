@@ -1,8 +1,10 @@
 import 'package:clean_arch/core/network/base/response_handler.dart';
 import 'package:clean_arch/core/state_handler/state_builder_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:untitled1/infrastructure/dal/daos/user_response.dart';
+import 'package:untitled1/infrastructure/navigation/routes.dart';
 import 'package:untitled1/presentation/auth/controllers/user.controller.dart';
 import '../../infrastructure/dal/daos/auth_response.dart';
 import 'controllers/auth.controller.dart';
@@ -54,6 +56,11 @@ class AuthScreen extends StatelessWidget {
                       ElevatedButton(onPressed: controller.getUserData, child: const Text('USER')),
                     ],
                   )),
+          ElevatedButton(
+              onPressed: () {
+                Get.offNamed(Routes.HOME);
+              },
+              child: const Text('HOME'))
         ]),
       ),
     );

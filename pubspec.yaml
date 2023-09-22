@@ -10,7 +10,7 @@ dependencies:
   get: 4.6.5
   flutter:
     sdk: flutter
-  clean_arch: 
+  clean_arch:
     git: https://github.com/cg-tushar/clean_arch.git
 
 dev_dependencies: 

@@ -10,14 +10,6 @@ class AuthResponse extends BaseModel<AuthResponse> {
   }
   String? _message;
   bool? _status;
-  AuthResponse copyWith({
-    String? message,
-    bool? status,
-  }) =>
-      AuthResponse(
-        message: message ?? _message,
-        status: status ?? _status,
-      );
   String? get message => _message;
   bool? get status => _status;
 

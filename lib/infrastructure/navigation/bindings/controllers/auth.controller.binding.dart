@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:untitled1/domain/usecases/user.useccase.dart';
+import 'package:untitled1/infrastructure/dal/daos/user_response.dart';
+import 'package:untitled1/presentation/auth/controllers/user.controller.dart';
 
 import '../../../../domain/usecases/auth.usecase.dart';
 import '../../../../presentation/auth/controllers/auth.controller.dart';
@@ -10,5 +13,9 @@ class AuthControllerBinding extends Bindings {
     Get.lazyPut<AuthController>(
       () => AuthController(Get.find<AuthUseCase<AuthResponse, AuthParam>>()),
     );
+    Get.lazyPut<UserController>(
+      () => UserController(Get.find<UserUseCase<UserResponse>>()),
+    );
+
   }
 }
